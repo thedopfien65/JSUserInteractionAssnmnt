@@ -2,6 +2,7 @@
 function fibby(n){
 	var value;
 	var div = document.createElement('div');
+	div.setAttribute("class", "fib-div");
 
 	if(n<2){
 		if(n === 0) {
@@ -36,6 +37,7 @@ var fib = function(n, node){
 function pelly(n){
 	var value;
 	var div = document.createElement('div');
+	div.setAttribute("class", "pell-div");
 
 	if(n<2){
 		if(n===0){
@@ -67,6 +69,7 @@ var pell = function(n, node){
 function trelly(n){
 	var value;
 	var div = document.createElement('div');
+	div.setAttribute("class", "trib-div");
 
 	if (n < 3){
 		if(n===2){
