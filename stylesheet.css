@@ -1,0 +1,52 @@
+#fibber{
+	display: inline-block;
+	background-color: red;
+	width: 100000px;
+}
+
+.fib-div{
+	color: white;
+	text-align: center;
+}
+
+.fib-left{
+	float: left;
+	display:inline-block;
+	width: 50%;
+}
+
+.fib-right{
+	float: right;
+	display:inline-block;
+	width:50%;
+}
+
+#peller{
+	display: inline-block;
+	background-color: blue;
+	width: 100000px;
+}
+.pell-div{
+	color: white;
+	text-align: center;
+}
+.pell-left{
+	float: left;
+	display: inline-block;
+	width: 50%;
+}
+.pell-right{
+	float: right;
+	display: inline-block;
+	width: 50%;
+}
+
+#tribber{
+	display: inline-block;
+	background-color: green;
+	width: 100000px;
+}
+.trib-div{
+	color: white;
+	text-align: center;
+}

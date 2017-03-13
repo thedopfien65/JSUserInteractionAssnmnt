@@ -20,6 +20,8 @@ function fibby(n){
 		value = left.value + right.value;
 		var p = document.createElement('p');
 		p.textContent = "Fib("+n+") =" + value;
+		left.html.setAttribute("class", "fib-left");
+		right.html.setAttribute("class", "fib-right");
 		div.appendChild(p);
 		div.appendChild(left.html);
 		div.appendChild(right.html);
@@ -54,6 +56,8 @@ function pelly(n){
 		value = 2*(left.value) + right.value;
 		var p = document.createElement(p);
 		p.textContent = "Pell("+n+") ="+value;
+//		left.html.setAttribute("class", "pell-left");
+//		right.html.setAttribte("class", "pell-right");
 		div.appendChild(p);
 		div.appendChild(left.html);
 		div.appendChild(right.html);
@@ -102,6 +106,10 @@ var trib = function(n, node){
 var fibDiv = document.createElement('div');
 var tribDiv = document.createElement('div');
 var pellDiv = document.createElement('div');
+
+fibDiv.setAttribute("id", "fibber");
+pellDiv.setAttribute("id", "peller");
+tribDiv.setAttribute("id", "tribber");
 
 document.body.appendChild(fibDiv);
 document.body.appendChild(tribDiv);
