@@ -20,8 +20,8 @@ function fibby(n){
 		value = left.value + right.value;
 		var p = document.createElement('p');
 		p.textContent = "Fib("+n+") =" + value;
-		left.html.setAttribute("class", "fib-left");
-		right.html.setAttribute("class", "fib-right");
+		left.html.setAttribute("class", "fib-div fib-left");
+		right.html.setAttribute("class", "fib-div fib-right");
 		div.appendChild(p);
 		div.appendChild(left.html);
 		div.appendChild(right.html);
