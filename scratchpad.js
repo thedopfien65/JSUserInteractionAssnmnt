@@ -189,10 +189,30 @@ fibDiv.setAttribute("id", "fibber");
 pellDiv.setAttribute("id", "peller");
 tribDiv.setAttribute("id", "tribber");
 
+//Slider & Button assignment
+
+function clearTree(node){
+	
+}
+
+//helper function that takes slider input
+var slideUpdater(n, node){
+	clearTree(node;)
+	if (node === fibDiv){fib(n, node)}
+	if (node === pellDiv){pell(n, node)}
+	if (node === tribDiv){trib(n, node)}
+}
+
+//function to empty div
+
+//slider to pick the iteration number
+
+//button to update
+
 document.body.appendChild(fibDiv);
 document.body.appendChild(tribDiv);
 document.body.appendChild(pellDiv);
 
-fib(11, fibDiv);
-pell(11, pellDiv);
-trib(11, tribDiv);
+//fib(11, fibDiv);
+//pell(11, pellDiv);
+//trib(11, tribDiv);
