@@ -5,6 +5,21 @@
    <title>(placeholder)</title>
 </head>
 <body>
+	<div id="fibBox" style="background-color:red;">
+	<div id="fib-options">
+		<input id="fib-slide" type="range" min=0 max=11 onchange="updateBtn(this, 'fib-button')"></input>
+		<button id="fib-button" onclick="updateTree('fib-slide','fibTree')"></button>
+	</div>
+	<div id="fibTree"></div>
+	</div>
+	
+	<div id="pellBox">
+	<div id="pellTree"></div>
+	</div>
+	
+	<div id="tribBox">
+	<div id="tribTree"></div>
+	</div>
    <script src="scratchpad.js" type="text/javascript"></script>
 </body>
 </html>

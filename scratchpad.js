@@ -1,6 +1,6 @@
 var style = document.createElement('style');
 style.textContent = 
-	"#fibber{"+
+	"#fibTree{"+
 	"display:inline-block;"+
 	"background-color:red;"+
 	"width:8800px;"+
@@ -22,7 +22,7 @@ style.textContent =
 	"display:inline-block;"+
 	"}"+
 	" "+
-	"#peller{"+
+	"#pellTree{"+
 	"display:inline-block;"+
 	"background-color:blue;"+
 	"width:9400px;"+
@@ -44,7 +44,7 @@ style.textContent =
 	"display:inline-block;"+
 	"}"+
 	" "+
-	"#tribber{"+
+	"#tribTree{"+
 	"display:inline-block;"+
 	"background-color:green;"+
 	"width: 15000px"+
@@ -181,38 +181,37 @@ var trib = function(n, node){
 	node.appendChild(tree.html);
 }
 
-var fibDiv = document.createElement('div');
-var tribDiv = document.createElement('div');
-var pellDiv = document.createElement('div');
+var fibDiv = document.getElementById('fibTree');
+var tribDiv = document.getElementById('tribTree');
+var pellDiv = document.getElementById('pellTree');
 
-fibDiv.setAttribute("id", "fibber");
-pellDiv.setAttribute("id", "peller");
-tribDiv.setAttribute("id", "tribber");
+fib(5, fibDiv);
+pell(5, pellDiv);
+trib(5, tribDiv);
 
 //Slider & Button assignment
-
-function clearTree(node){
-	
-}
-
-//helper function that takes slider input
-var slideUpdater(n, node){
-	clearTree(node;)
-	if (node === fibDiv){fib(n, node)}
-	if (node === pellDiv){pell(n, node)}
-	if (node === tribDiv){trib(n, node)}
-}
+var fibBtn = document.getElementById('fib-button');
+fibBtn.innerHTML = "Fib("+document.getElementById('fib-slide').value+")";
 
 //function to empty div
+var clearTree = function(node){
+	var c = document.getElementById(node);
+	while(c.hasChildNodes()){
+			c.removeChild(c.lastChild);
+	}
+}
 
-//slider to pick the iteration number
+function updateBtn(node, btn){
+	var b = document.getElementById(btn);
+	b.innerHTML = "Fib("+node.value+")";
+}
 
-//button to update
-
-document.body.appendChild(fibDiv);
-document.body.appendChild(tribDiv);
-document.body.appendChild(pellDiv);
-
-//fib(11, fibDiv);
-//pell(11, pellDiv);
-//trib(11, tribDiv);
+function updateTree(slide, node){
+	clearTree(node);
+	var newDiv = document.getElementById(node);
+	var slider = document.getElementById(slide);
+	var newNum = slider.value;
+	if(node == 'fibTree'){fib(newNum, newDiv);}
+	if(node == 'pellTree'){pell(newNum, newDiv);}
+	if(node == 'tribTree'){trib(newNum, newDiv);}
+}
