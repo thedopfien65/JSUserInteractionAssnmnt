@@ -193,6 +193,12 @@ trib(5, tribDiv);
 var fibBtn = document.getElementById('fib-button');
 fibBtn.innerHTML = "Fib("+document.getElementById('fib-slide').value+")";
 
+var pellBtn = document.getElementById('pell-button');
+pellBtn.innerHTML = "Pell("+document.getElementById('pell-slide').value+")";
+
+var pellBtn = document.getElementById('trib-button');
+pellBtn.innerHTML = "Trib("+document.getElementById('trib-slide').value+")";
+
 //function to empty div
 var clearTree = function(node){
 	var c = document.getElementById(node);
@@ -203,7 +209,10 @@ var clearTree = function(node){
 
 function updateBtn(node, btn){
 	var b = document.getElementById(btn);
-	b.innerHTML = "Fib("+node.value+")";
+	if(btn == 'fib-button'){var f = "Fib";}
+	if(btn == 'pell-button'){var f = "Pell";}
+	if(btn == 'trib-button'){var f = "Trib";}
+	b.innerHTML = f+"("+node.value+")";
 }
 
 function updateTree(slide, node){

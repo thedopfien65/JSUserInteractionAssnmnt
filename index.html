@@ -13,11 +13,19 @@
 	<div id="fibTree"></div>
 	</div>
 	
-	<div id="pellBox">
+	<div id="pellBox" style="background-color:blue;">
+	<div id="pell-options">
+		<input id="pell-slide" type="range" min=0 max=11 onchange="updateBtn(this, 'pell-button')"></input>
+		<button id="pell-button" onclick="updateTree('pell-slide','pellTree')"></button>
+	</div>
 	<div id="pellTree"></div>
 	</div>
 	
-	<div id="tribBox">
+	<div id="tribBox" style="background-color:green">
+	<div id="trib-options">
+		<input id="trib-slide" type="range" min=0 max=11 onchange="updateBtn(this, 'trib-button')"></input>
+		<button id="trib-button" onclick="updateTree('trib-slide','tribTree')"></button>
+	</div>
 	<div id="tribTree"></div>
 	</div>
    <script src="scratchpad.js" type="text/javascript"></script>
