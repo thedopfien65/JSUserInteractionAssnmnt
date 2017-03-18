@@ -3,7 +3,7 @@ style.textContent =
 	"#fibber{"+
 	"display:inline-block;"+
 	"background-color:red;"+
-	"width:50000px;"+
+	"width:8800px;"+
 	"}"+
 	" "+
 	".fib-div{"+
@@ -15,19 +15,17 @@ style.textContent =
 	".fib-left{"+
 	"float:left;"+
 	"display:inline-block;"+
-	"width:50%;"+
 	"}"+
 	" "+
 	".fib-right{"+
 	"float:right;"+
 	"display:inline-block;"+
-	"width:50%;"+
 	"}"+
 	" "+
 	"#peller{"+
 	"display:inline-block;"+
 	"background-color:blue;"+
-	"width:50000px;"+
+	"width:9400px;"+
 	"}"+
 	" "+
 	".pell-div{"+
@@ -39,24 +37,37 @@ style.textContent =
 	".pell-left{"+
 	"float:left;"+
 	"display:inline-block;"+
-	"width:50%;"+
 	"}"+
 	" "+
-	".pell-right"+
+	".pell-right{"+
 	"float:right;"+
 	"display:inline-block;"+
-	"width:50%;"+
 	"}"+
 	" "+
 	"#tribber{"+
 	"display:inline-block;"+
 	"background-color:green;"+
-	"width:50000px;"+
+	"width: 15000px"+
 	"}"+
 	" "+
 	".trib-div{"+
 	"color:white;"+
 	"text-align:center;"+
+	"background-color: rgba(0,0,0,0.1);"+
+	"}"+
+	" "+
+	".trib-left{"+
+	"float:left;"+
+	"display:inline-block;"+
+	"}"+
+	" "+
+	".trib-mid{"+
+	"display: inline-block;"+
+	"}"+
+	" "+
+	".trib-right"+
+	"float:right;"+
+	"display:inline-block;"+
 	"}";
 
 document.body.appendChild(style);
@@ -155,6 +166,9 @@ function trelly(n){
 		value = left.value + mid.value + right.value;
 		var p = document.createElement('p');
 		p.textContent = "Trib("+n+") ="+value;
+		left.html.setAttribute("class", "trib-div trib-left");
+		mid.html.setAttribute("class", "trib-div trib-mid");
+		right.html.setAttribute("class", "trib-div trib-right");
 		div.appendChild(p);
 		div.appendChild(left.html);
 		div.appendChild(mid.html);
